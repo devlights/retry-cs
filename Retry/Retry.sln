@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devlights.Samples.Retry", "Devlights.Samples.Retry\Devlights.Samples.Retry.csproj", "{DF14F41B-5916-4D6C-A091-80594C04462D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devlights.Samples.Retry.Tests", "Devlights.Samples.Retry.Tests\Devlights.Samples.Retry.Tests.csproj", "{1D66DD7F-115F-4AE0-AFCE-E1093844F833}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF14F41B-5916-4D6C-A091-80594C04462D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF14F41B-5916-4D6C-A091-80594C04462D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF14F41B-5916-4D6C-A091-80594C04462D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF14F41B-5916-4D6C-A091-80594C04462D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D66DD7F-115F-4AE0-AFCE-E1093844F833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D66DD7F-115F-4AE0-AFCE-E1093844F833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D66DD7F-115F-4AE0-AFCE-E1093844F833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D66DD7F-115F-4AE0-AFCE-E1093844F833}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
