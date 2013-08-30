@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Devlights.Samples.Retry
+﻿namespace Devlights.Samples.Retry
 {
+  using System;
+  using System.Collections.Generic;
+  using Microsoft.VisualStudio.TestTools.UnitTesting;
+  
   [TestClass]
   public class RetryHandlerTest
   {
