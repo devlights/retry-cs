@@ -46,6 +46,8 @@
     {
       int activeRetryCount = 0;
       List<Exception> exList = new List<Exception>();
+
+      bool stopThrowException = false;
       try
       {
         for (int i = 0; i < (retryCount + 1); i++)
@@ -55,6 +57,7 @@
             action();
 
             activeRetryCount = (i + 1);
+            stopThrowException = true;
 
             break;
           }
@@ -100,9 +103,12 @@
       }
       finally
       {
-        if (exList.Count != 0 && errorCallback == null)
+        if (!stopThrowException)
         {
-          throw new RetryException(exList);
+          if (exList.Count != 0 && errorCallback == null)
+          {
+            throw new RetryException(exList);
+          }
         }
       }
     }

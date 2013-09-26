@@ -54,6 +54,39 @@
     }
 
     [TestMethod]
+    public void エラーが発生していてもリトライ中に処理が成功したら例外は発生しない()
+    {
+      // Arrange
+      int retryCount = 3;
+      int interval = 100;
+
+      // Act
+      List<bool> tmpList = new List<bool>();
+
+      try
+      {
+        int count = 0;
+        RetryHandler.Execute(retryCount, interval, () =>
+        {
+          if (Interlocked.Increment(ref count) <= 3)
+          {
+            throw new Exception();
+          }
+
+          tmpList.Add(true);
+        });
+      }
+      catch (RetryException ex)
+      {
+        // Assert
+        Assert.Fail("例外が発生している");
+      }
+
+      // Assert
+      Assert.AreEqual<int>(1, tmpList.Count);
+    }
+
+    [TestMethod]
     public void エラーコールバックを指定するとエラー時に呼ばれる()
     {
       // Arrange
