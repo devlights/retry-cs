@@ -13,7 +13,7 @@
     {
       // Arrange
       int retryCount = 3;
-      int interval = 500;
+      int interval   = 500;
 
       // Act
       List<bool> tmpList = new List<bool>();
