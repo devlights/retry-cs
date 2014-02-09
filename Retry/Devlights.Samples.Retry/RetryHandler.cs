@@ -105,6 +105,9 @@
       {
         if (!stopThrowException)
         {
+          //
+          // 例外が発生しているが、コールバックを設定していない場合、呼び元に通知しない。
+          //
           if (exList.Count != 0 && errorCallback == null)
           {
             throw new RetryException(exList);
